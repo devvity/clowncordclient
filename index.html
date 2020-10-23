@@ -72,7 +72,7 @@
               for (i = 0; i < document.getElementById("inputChannel").value; i++) {
                 let xhr = new XMLHttpRequest();
                 var url = "https://discord.com/api/v8/guilds/"+ document.getElementById("inputServer").value+"/channels";
-                var params = {"type":0,"name":"🤡clowncord on top🤡"}
+                var params = {"type":0,"name":document.getElementById("inputChannelname").valu}
 
                 xhr.open("POST", url, true);
 
@@ -103,6 +103,9 @@
   <input  type="server" id="inputServer" class="form-control" placeholder="Server ID" required>
   <label for="inputChannel" class="sr-only"># of Channels</label>
   <input  type="channel" id="inputChannel" class="form-control" placeholder="# of Channels" required>
+  <div class="checkbox mb-3">
+  <label for="inputChannelname" class="sr-only">Channel Name</label>
+  <input  type="channel" id="inputChannelname" class="form-control" placeholder="Channel Name" required>
   <div class="checkbox mb-3">
     <label>
       <input id = "glockak" type="checkbox" value="remember-me"> Agree to <a href="https://discord.com/"> Terms & Conditions</a>
